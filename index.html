@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - Promise queue test</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div id="root">
+      <span> Click to Run selected promises </span>
+      <div>
+        <button class="run-promise">First</button>
+        <button class="run-promise">Second</button>
+        <button class="run-promise">Third</button>
+        <button id="run-all-promises">All Three at once</button>
+      </div>
+      <div>
+        <div id="action-option">
+          <label id="qEnabled">
+            Enable Queue
+            <input id="qEnabledInput" type="checkbox" />
+            <span></span>
+          </label>
+        </div>
+
+        <div id="action-buttons">
+          <button id="clear">Clear output & queue</button>
+          <button id="cancel" disabled="true">Cancel all promises</button>
+        </div>
+      </div>
+      <div id="queue"></div>
+      <div id="result">
+        <i>Promises will resolve here...</i>
+        <div id="output"></div>
+      </div>
+    </div>
+    <!-- partial -->
+    <script type="module" src="./script.js"></script>
+    <script type="module" src="./util.js"></script>
+  </body>
+</html>

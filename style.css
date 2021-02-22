@@ -1,0 +1,207 @@
+body {
+  background: #a8ff78;
+  background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);
+  background: linear-gradient(to right, #78ffd6, #a8ff78);
+}
+body * {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
+
+button {
+  background: #F5F5F5;
+  border: 2px solid #34495e;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+button:hover, button:active, button:active {
+  background: #34495e;
+  color: #F5F5F5;
+}
+button:disabled {
+  border-color: grey;
+  cursor: not-allowed;
+}
+button:disabled:hover, button:disabled:active, button:disabled:active {
+  background: #F5F5F5;
+  color: grey;
+}
+
+.run-promise {
+  position: relative;
+  background: #F5F5F5;
+  color: #34495e;
+}
+.run-promise:before {
+  position: absolute;
+  top: -17px;
+  left: 0;
+  font-size: 13px;
+  color: #34495e;
+}
+.run-promise:hover, .run-promise:active, .run-promise:focus {
+  color: #F5F5F5;
+}
+.run-promise:first-child {
+  border-color: #3498db;
+}
+.run-promise:first-child:before {
+  content: "~1000ms";
+}
+.run-promise:first-child:hover, .run-promise:first-child:active, .run-promise:first-child:focus {
+  background: #3498db;
+}
+.run-promise:nth-child(2) {
+  border-color: #9b59b6;
+}
+.run-promise:nth-child(2):before {
+  content: "~5000ms";
+}
+.run-promise:nth-child(2):hover, .run-promise:nth-child(2):active, .run-promise:nth-child(2):focus {
+  background: #9b59b6;
+}
+.run-promise:nth-child(3) {
+  border-color: #e74c3c;
+}
+.run-promise:nth-child(3):before {
+  content: "~3000ms";
+}
+.run-promise:nth-child(3):hover, .run-promise:nth-child(3):active, .run-promise:nth-child(3):focus {
+  background: #e74c3c;
+}
+
+#result {
+  background: #F5F5F5;
+  padding: 10px;
+}
+#result > #output > div {
+  margin: 10px;
+  border: 2px dashed transparent;
+  padding: 5px;
+  text-align: center;
+}
+#result > #output > div.first {
+  border-color: #3498db;
+}
+#result > #output > div.second {
+  border-color: #9b59b6;
+}
+#result > #output > div.third {
+  border-color: #e74c3c;
+}
+
+#run-all-promises {
+  margin-left: 25px;
+  position: relative;
+}
+#run-all-promises:before {
+  content: "";
+  display: block;
+  height: 36px;
+  border-left: 2px solid #34495e;
+  top: 7px;
+  left: -20px;
+  position: absolute;
+}
+
+#action-option {
+  display: inline-flex;
+}
+#action-option label {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+#action-option label:last-child {
+  margin-bottom: 0;
+}
+#action-option label input {
+  display: none;
+}
+#action-option label input:checked + span:before {
+  content: "check";
+}
+#action-option label span {
+  border: 2px solid #34495e;
+  width: 18px;
+  height: 18px;
+  margin-left: 5px;
+  position: relative;
+  display: inline-block;
+  background: #F5F5F5;
+}
+#action-option label span:before {
+  content: "";
+  font-family: "Material Icons";
+  font-size: 18px;
+  position: absolute;
+  color: #34495e;
+  top: calc(50% - 9px);
+  left: calc(50% - 9px);
+  font-weight: 900;
+}
+
+#action-buttons {
+  position: relative;
+  margin-left: 40px;
+}
+#action-buttons:before {
+  content: "";
+  display: block;
+  height: 30px;
+  border-left: 2px solid #34495e;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -20px;
+  position: absolute;
+}
+#action-buttons > button {
+  font-size: 15px;
+  padding: 10px;
+}
+
+#queue {
+  position: relative;
+  min-height: 20px;
+}
+#queue:before {
+  content: "[";
+  color: #833471;
+  top: -7px;
+  left: -10px;
+  position: absolute;
+  font-size: 30px;
+}
+#queue:after {
+  content: "]";
+  color: #833471;
+  top: -7px;
+  right: -10px;
+  position: absolute;
+  font-size: 30px;
+}
+#queue > span {
+  position: relative;
+}
+#queue > span:not(:last-child):after {
+  content: " =>";
+  color: #833471;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+#root > * {
+  margin: 10px;
+}
+#root > div:nth-child(3) {
+  display: flex;
+}
